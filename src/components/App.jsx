@@ -3,8 +3,6 @@ import Contact from "./Contact";
 import Education from "./Education";
 import Work from "./Work";
 import "../styles.css"
-import "../assets/phone.svg"
-import "../assets/email-outline.svg"
 
 function App() {
     // const [person, setPerson] = useState({ name: '', email: '', phone: '' });
