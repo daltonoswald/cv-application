@@ -3,6 +3,7 @@ import Contact from "./Contact";
 import Education from "./Education";
 import Work from "./Work";
 import "../styles.css"
+import phoneIcon from "/src/assets/phone.svg"
 
 function App() {
     // const [person, setPerson] = useState({ name: '', email: '', phone: '' });
@@ -64,7 +65,8 @@ function App() {
                         <h4 className="cv-email">{email}</h4>
                     </div>
                     <div className="contact-row">
-                        <img className="phone-icon" src="src/assets/phone.svg" alt="phone icon" />
+                        {/* <img className="phone-icon" src="/src/assets/phone.svg" alt="phone icon" /> */}
+                        <img className="phone-icon" src={phoneIcon} alt="phone icon" />
                         <h4 className="cv-phone">{phone}</h4>
                     </div>
                 </div>
