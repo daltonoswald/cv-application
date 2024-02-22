@@ -6,9 +6,9 @@ function Education({ schoolName, degreeName, gradDate, updateName }) {
     const [isSubmitted, setIsSubmitted] = useState(false);
     if (isSubmitted) {
             return (
-            <>
-                <button className="form-edit" onClick={editForm}>Edit Education</button>
-            </>
+                <div className="form-edit-container"> Education
+                    <button className="form-edit" onClick={editForm}>Edit Education</button>
+                </div>
         )
     }
 
@@ -31,7 +31,7 @@ function Education({ schoolName, degreeName, gradDate, updateName }) {
 
     return (
         <>
-        <form className="form" onSubmit={submitForm}>
+        <form className="form" onSubmit={submitForm}> Education
                 <label>
                     School Name: {' '}
                     <input

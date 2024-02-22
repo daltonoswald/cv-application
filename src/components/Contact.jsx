@@ -8,7 +8,9 @@ function Contact({ name, email, phone, updateName }) {
     if (isSubmitted) {
         return (
             <>
+                <div className="form-edit-container"> Contact
                     <button className="form-edit" onClick={editForm}>Edit Contact</button>
+                </div>
             </>
         )
     }
@@ -33,7 +35,7 @@ function Contact({ name, email, phone, updateName }) {
 
     return(
         <>
-        <form className="form" onSubmit={submitForm}>
+        <form className="form" onSubmit={submitForm}> Contact
                 <label>
                     Name: {' '}
                     <input

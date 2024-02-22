@@ -7,7 +7,9 @@ function Work({ company, title, duties, start, end, updateName }) {
     if (isSubmitted) {
             return (
             <>
-                <button className="form-edit" onClick={editForm}>Edit Work</button>
+                <div className="form-edit-container"> Work
+                    <button className="form-edit" onClick={editForm}>Edit Work</button>
+                </div>
             </>
         )
     }
@@ -31,7 +33,7 @@ function Work({ company, title, duties, start, end, updateName }) {
 
     return (
         <>
-        <form className="form" onSubmit={submitForm}>
+        <form className="form" onSubmit={submitForm}> Work
                 <label>
                     Company Name: {' '}
                     <input
