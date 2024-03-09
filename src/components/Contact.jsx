@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import '../styles/form-styles.css';
 
-function Contact({ name, email, phone, updateName }) {
-    const [person, setPerson] = useState({ name: '', email: '', phone: '' });
+function Contact({ name, email, phone, updateName, setName, setEmail, setPhone }) {
+    // const [person, setPerson] = useState({ name: '', email: '', phone: '' });
     const [isSubmitted, setIsSubmitted] = useState(false);
     if (isSubmitted) {
         return (
@@ -26,11 +26,11 @@ function Contact({ name, email, phone, updateName }) {
     }
 
     function submitForm(e) {
-        const newPerson = {...person, name: name, email: email, phone: phone}
-        setPerson(newPerson)
+        // const newPerson = {...person, name: name, email: email, phone: phone}
+        // setPerson(newPerson)
         e.preventDefault();
         setIsSubmitted(true);
-        console.log(`newPerson =`, newPerson);
+        // console.log(`newPerson =`, newPerson);
     }
 
     return(

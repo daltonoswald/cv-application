@@ -2,7 +2,6 @@ import { useState } from "react";
 import '../styles/form-styles.css';
 
 function Work({ company, title, duties, start, end, updateName }) {
-    const [work, setWork] = useState({ company: '', title: '', duties: '', start: '', end: ''})
     const [isSubmitted, setIsSubmitted] = useState(false);
     if (isSubmitted) {
             return (
@@ -24,11 +23,8 @@ function Work({ company, title, duties, start, end, updateName }) {
     }
 
     function submitForm(e) {
-        const newWork = {...work, company: company, title: title, duties: duties, start: start, end: end }
-        setWork(newWork)
         e.preventDefault();
         setIsSubmitted(true);
-        console.log(`newWork =`, newWork);
     }
 
     return (

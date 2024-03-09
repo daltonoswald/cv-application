@@ -2,7 +2,6 @@ import { useState } from "react";
 import '../styles/form-styles.css';
 
 function Education({ schoolName, degreeName, gradDate, updateName }) {
-    const [education, setEducation] = useState({ schoolName: '', degreeName: '', gradDate: '' });
     const [isSubmitted, setIsSubmitted] = useState(false);
     if (isSubmitted) {
             return (
@@ -22,11 +21,8 @@ function Education({ schoolName, degreeName, gradDate, updateName }) {
     }
 
     function submitForm(e) {
-        const newEducation = {...education, schoolName: schoolName, degreeName: degreeName, gradDate: gradDate}
-        setEducation(newEducation)
         e.preventDefault();
         setIsSubmitted(true);
-        console.log(`newEducation =`, newEducation);
     }
 
     return (

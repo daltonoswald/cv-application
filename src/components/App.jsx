@@ -7,7 +7,6 @@ import phoneIcon from "/src/assets/phone.svg"
 import emailIcon from "/src/assets/email-outline.svg"
 
 function App() {
-    // const [person, setPerson] = useState({ name: '', email: '', phone: '' });
     const [name, setName] = useState('')
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -21,6 +20,19 @@ function App() {
     const [duties, setDuties] = useState('');
     const [start, setStart] = useState('');
     const [end, setEnd] = useState('');
+
+    function autoFill() {
+        setName('John Doe');
+        setEmail('johndoe@hotmail.com');
+        setPhone('555-555-5555');
+        setSchoolName('College of University');
+        setDegreeName('Computer Science');
+        setGradDate('2024-03-09');
+        setCompany('Big Tech Company');
+        setTitle('Web developer');
+        setStart('2024-03-09');
+        setEnd('2024-03-10');
+    }
 
     function updateValue(value, stateName) {
         console.log(stateName);
@@ -53,9 +65,10 @@ function App() {
         <>
     <div className="container">
         <div className="form-container">
-            <Contact updateName={updateValue} name={name} email={email} phone={phone} />
+            <Contact updateName={updateValue} setName={setName} name={name} setEmail={setEmail} email={email} setPhone={setPhone} phone={phone} />
             <Education updateName={updateValue} schoolName={schoolName} degreeName={degreeName} gradDate={gradDate} />
             <Work updateName={updateValue} company={company} title={title} duties={duties} start={start} end={end}/>
+            <button className="autofill-button" onClick={autoFill} > Autofill </button>
         </div>
         <div className="preview-container">
             <div className="contact">
